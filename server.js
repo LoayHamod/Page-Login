@@ -1,6 +1,5 @@
 const express = require("express");
-const session = require('express-session');
-const cookieSession = require("cookie-session");
+const session = require('cookie-session');
 const cors = require("cors");
 
 const dbConfig = require("./app/config/db.config");
@@ -9,13 +8,6 @@ const app = express();
 
 app.use(cors());
 
-app.use(
-  cookieSession({
-    name: "AOL-session",
-    keys: ["COOKIE_SECRET"], // should use as secret environment variable
-    httpOnly: true
-  })
-);
 
 app.use(session({
   secret: 'your_secret_key',
