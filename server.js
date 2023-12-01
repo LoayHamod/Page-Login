@@ -28,7 +28,7 @@ const Role = db.role;
 // Use async/await here
 (async () => {
   try {
-    await db.mongoose.connect(`mongodb://${dbConfig.HOST}:${dbConfig.PORT}/${dbConfig.DB}`);
+    await db.mongoose.connect(`mongodb://${dbConfig.HOST}/${dbConfig.DB}`);
     console.log("Successfully connect to MongoDB.");
     initial();
   } catch (err) {
