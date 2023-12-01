@@ -1,6 +1,8 @@
 const express = require("express");
 const session = require('cookie-session');
 const cors = require("cors");
+const mongoose = requite("mongoose");
+  mongoose.Promise = global.Promise;
 
 const dbConfig = require("./app/config/db.config");
 
@@ -28,7 +30,7 @@ const Role = db.role;
 // Use async/await here
 (async () => {
   try {
-    await db.mongoose.connect(`mongodb://${dbConfig.HOST}/${dbConfig.DB}`);
+    await mongoose.connect(`mongodb://${dbConfig.HOST}/${dbConfig.DB}`);
     console.log("Successfully connect to MongoDB.");
     initial();
   } catch (err) {
