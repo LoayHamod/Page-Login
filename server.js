@@ -1,7 +1,7 @@
 const express = require("express");
 const session = require('cookie-session');
 const cors = require("cors");
-const mongoose = requite("mongoose");
+const mongoose = require("mongoose");
   mongoose.Promise = global.Promise;
 
 const dbConfig = require("./app/config/db.config");
