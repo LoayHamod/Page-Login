@@ -1,3 +1,5 @@
 module.exports = {
-  secret: "AOL-secret-key"
+  secret: "AOL-secret-key",
+  jwtExpiration: 3600,         // 1 hour
+  jwtRefreshExpiration: 86400, // 24 hours
 };
